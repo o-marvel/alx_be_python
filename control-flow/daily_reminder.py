@@ -11,4 +11,5 @@ match priority:
     case "low":
         if time_bound == "no":
          print(f"Note: '{task_desc}' is a low priority task. Consider completing it when you have free time.")
-        
+    case _: 
+        print(f"No task available ")
