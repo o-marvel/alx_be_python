@@ -17,9 +17,10 @@ def perform_operation(num1, num2, operation):
         return result
     elif operation == 'divide':
        if num1 / 0 or num2 / 0:
-            print("Error:Cannot divide by zero")  
+         result = "Error:Cannot divide by zero"
        else:
             result = num1 / num2
+            return result
     else:
         result =  "Error: Invalid operation."
         return result
