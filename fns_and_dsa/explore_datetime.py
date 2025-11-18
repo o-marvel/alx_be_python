@@ -32,7 +32,7 @@ def calculate_future_date(days):
 
 # --- Main Program ---
 # Prompt the user
-days_input = int(input("Enter number of days: "))
+days_input = int(input("Enter the number of days to add to the current date: "))
 
 # Call the function
 calculate_future_date(days_input)
