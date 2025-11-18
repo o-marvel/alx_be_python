@@ -25,4 +25,3 @@ def perform_operation(num1, num2, operation):
         result =  "Error: Invalid operation."
         return result
 
-# if __name__ == "__main__":
