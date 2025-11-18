@@ -2,9 +2,6 @@
 
 def perform_operation(num1, num2, operation):
 
-    # operation = input("Enter operation (+, -, *, /): ")
-    # num1 = float(input("Enter first number: "))
-    # num2 = float(input("Enter second number: "))
 
     if operation == 'add':
         result = num1 + num2
