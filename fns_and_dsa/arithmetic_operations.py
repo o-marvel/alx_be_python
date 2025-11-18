@@ -1,7 +1,7 @@
 
 
 def perform_operation(num1, num2, operation):
-    """Performs a basic arithmetic operation based on user input."""
+    
     # operation = input("Enter operation (+, -, *, /): ")
     # num1 = float(input("Enter first number: "))
     # num2 = float(input("Enter second number: "))
