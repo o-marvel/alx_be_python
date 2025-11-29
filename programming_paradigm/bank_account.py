@@ -1,26 +1,17 @@
 class BankAccount:
-    #  account_balance = 0
-    def __init__(self, account_balance = 0):
-        self.account_balance = account_balance
-
-    # Implement deposit(amount), withdraw(amount), and display_balance() methods.
-        
+    def __init__(self, initial_balance=0):
+        self.__account_balance = initial_balance  # private attribute for encapsulation
 
     def deposit(self, amount):
         if amount > 0:
-            self.account_balance += amount
-            return True
-        return False
-
+            self.__account_balance += amount
 
     def withdraw(self, amount):
-        if self.account_balance > amount:
-            self.account_balance -= amount
+        if amount <= self.__account_balance:
+            self.__account_balance -= amount
             return True
-        return False
+        else:
+            return False
 
     def display_balance(self):
-        self.account_balance
-        print(f"current balance: {self.account_balance}")
-
-# if __name__ == "__main__":
+        return f"Current Balance: ${self.__account_balance}"
