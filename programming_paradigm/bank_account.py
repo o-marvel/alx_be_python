@@ -21,6 +21,6 @@ class BankAccount:
 
     def display_balance(self):
         self.account_balance
-        print(f"Account balance: {self.account_balance}")
+        print(f"current balance: {self.account_balance}")
 
 # if __name__ == "__main__":
