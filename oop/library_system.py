@@ -4,20 +4,28 @@ class Book:
     def __init__(self, title, author):
         self.title:str = title
         self.author:str  = author
-        print(f"Book : {self.title} by {self.author}")
-#
+
+    def __str__(self):
+        return f"Book: {self.title} by {self.author}"
+
 #  EBook and PrintBook:
 class EBook(Book):
     def __init__(self, title, author, file_size):
         super().__init__(title, author)
         self.file_size:int = file_size  # in MB
-        print(f"EBook : {self.title} by {self.author} of size {file_size}MB")
+        # print(f"EBook : {self.title} by {self.author} of size {file_size}MB")
+
+    def __str__(self, file_size):
+        return f"EBook : {self.title} by {self.author} of size {file_size}MB"
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
         super().__init__(title, author)
         self.page_count:int = page_count # in kg
-        print(f"PrintBook : {self.title} by {self.author} of pages {page_count}")
+        # print(f"PrintBook : {self.title} by {self.author} of pages {page_count}")
+
+    def __str__(self, page_count):
+       print(f"PrintBook : {self.title} by {self.author} of pages {page_count}")
 
 
 #     Attributes: books (a list to store instances of Book, EBook, and PrintBook).
@@ -30,6 +38,9 @@ class Library:
 
     def add_book(self, book):
         self.books.append(book)
+
+    def __str__(self):
+        print("Library contains the following books:")
 
     def list_books(self):
         for book in self.books:
