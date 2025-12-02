@@ -15,8 +15,8 @@ class EBook(Book):
         self.file_size:int = file_size  # in MB
         # print(f"EBook : {self.title} by {self.author} of size {file_size}MB")
 
-    def __str__(self, file_size):
-        return f"EBook : {self.title} by {self.author} of size {file_size}MB"
+    def __str__(self):
+        return f"EBook : {self.title} by {self.author} of size {self.file_size}MB"
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
@@ -24,8 +24,8 @@ class PrintBook(Book):
         self.page_count:int = page_count # in kg
         # print(f"PrintBook : {self.title} by {self.author} of pages {page_count}")
 
-    def __str__(self, page_count):
-       print(f"PrintBook : {self.title} by {self.author} of pages {page_count}")
+    def __str__(self):
+       print(f"PrintBook : {self.title} by {self.author} of pages {self.page_count}")
 
 
 #     Attributes: books (a list to store instances of Book, EBook, and PrintBook).
