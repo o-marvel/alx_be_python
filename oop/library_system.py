@@ -34,7 +34,7 @@ class PrintBook(Book):
 # list_books(self): Prints details of each book in the library.
 class Library:
     def __init__(self):
-        self.books:list = []
+        self.books = []
 
     def add_book(self, book):
         self.books.append(book)
