@@ -16,16 +16,15 @@ class EBook(Book):
         # print(f"EBook : {self.title} by {self.author} of size {file_size}MB")
 
     def __str__(self):
-        return f"EBook : {self.title} by {self.author} of size {self.file_size}MB"
+        return f"EBook: {self.title} by {self.author} of size {self.file_size}MB"
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
         super().__init__(title, author)
         self.page_count:int = page_count # in kg
-        # print(f"PrintBook : {self.title} by {self.author} of pages {page_count}")
 
     def __str__(self):
-       print(f"PrintBook : {self.title} by {self.author} of pages {self.page_count}")
+       print(f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count} kg")
 
 
 #     Attributes: books (a list to store instances of Book, EBook, and PrintBook).
@@ -35,20 +34,11 @@ class PrintBook(Book):
 class Library:
     def __init__(self):
         self.books = []
-
+    
     def add_book(self, book):
         self.books.append(book)
-
-    def __str__(self):
-        print("Library contains the following books:")
-
+    
     def list_books(self):
         for book in self.books:
             print(book)
-            #   Book: Pride and Prejudice by Jane Austen
-            # if isinstance(book, EBook):
-            #     print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}MB")
-            # elif isinstance(book, PrintBook):
-            #     print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
-            # else:
-            #     print(f"Book: {book.title} by {book.author}")
+        return None
