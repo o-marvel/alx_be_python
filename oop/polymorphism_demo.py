@@ -6,6 +6,7 @@ class Shape:
     
 class Rectangle(Shape):
     def __init__(self, width, height):
+        super().__init__()
         self.width = width
         self.height = height
     
@@ -14,7 +15,12 @@ class Rectangle(Shape):
 
 class Circle(Shape):
     def __init__(self, radius):
+        super().__init__()
         self.radius = radius
     
     def area(self):
         return math.pi * (self.radius ** 2)
+
+
+# polymorphism_demo.py doesn't 
+# contain: ["self.length", "self.length * self.width"]
